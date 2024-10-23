@@ -10,7 +10,7 @@ const CountryCard = ({ name, flag, population, region, capital, data }) => {
         <h3 className="card-title">{name}</h3>
         <p>
           <b>Population: </b>
-          {population.toLocaleString("en-IN")}
+          {population?.toLocaleString("en-IN")}
         </p>
         <p>
           <b>Region: </b>
