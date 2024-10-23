@@ -3,12 +3,18 @@ import "./CountryDetails.css";
 import { Link, useLocation, useParams } from "react-router-dom";
 import useTheme from "../hooks/useTheme";
 import CountryDetailsShimmer from "./CountryDetailsShimmer";
+
 const CountryDetails = () => {
   const params = useParams();
+
   const countryName = params.country;
+
   const [countryData, setCountryData] = useState(null);
+
   const [notFound, SetNotFound] = useState(false);
+
   const { state } = useLocation();
+
   const [isDark] = useTheme();
 
   function updateCountryData(data) {
